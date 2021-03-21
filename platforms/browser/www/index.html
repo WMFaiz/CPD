@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Good default declaration:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+            * Enable eval(): add 'unsafe-eval' to default-src
+        * Create your own at http://cspisawesome.com
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <title>CPD</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <h2 class="title">Mixing Tank</h2>
+            <div class="shadow"></div>
+        </div>
+        <div class="body">
+            <div class="calculation">
+                <div class="ct_calculation">
+                    <div class="ct">
+                        <h3 class="title">CT</h3>
+                    </div>
+                    <div class="methods">
+                        <div class="method_part_one">
+                            <p>
+                                MT: <input type="text" name="ct_name" id="ct_name"> -   
+                                <input type="number" name="ct_line" id="ct_line" value="1"> Line
+                            </p>
+                        </div>
+                        <br>
+                        <div class="method_part_two">
+                            <p>
+                                <input type="number" name="ct_kg_1" id="ct_kg_1"> kg
+                                <input type="number" name="ct_cm_1" id="ct_cm_1"> cm
+                            </p>
+                            <p>From: <input type="text" name="ct_time_1" id="ct_time_1"/></p>
+                            <p>To: <input type="text" name="ct_time_2" id="ct_time_2"/></p>
+                        </div>
+                        <br>
+                        <div class="method_part_three">
+                            <p>
+                                M1: <input type="number" name="ct_m1_1" id="ct_m1_1"> = 
+                                <input type="number" name="ct_cm1_1" id="ct_cm1_1"> cm
+                            </p>
+                            <p>V1: <input type="number" name="ct_v1_1" id="ct_v1_1"></p>
+                            <p>
+                                M2: <input type="number" name="ct_m2_1" id="ct_m2_1"> = 
+                                <input type="number" name="ct_cm2_1" id="ct_cm2_1"> cm
+                            </p>
+                            <p>V2: <input type="number" name="ct_v2_1" id="ct_v2_1"></p>
+                            <br>
+                        </div>
+                        <div class="method_part_four">
+                            <p>M2 - M1: <input type="number" name="ct_m2_m1_1" id="ct_m2_m1_1" readonly></p>
+                            <p>Full - M2: <input type="number" name="ct_full_tank_1" id="ct_full_tank_1" readonly></p>
+                        </div>
+                        <p><button id="ct_clear">Clear</button></p>
+                    </div>
+                </div>
+                <div class="st_calculation">
+                    <div class="st">
+                        <h3 class="title">ST</h3>
+                    </div>
+                    <div class="methods">
+                        
+                    </div>
+                </div>
+                <div class="mt_calculation">
+                    <div class="mt">
+                        <h3 class="title">MT</h3>
+                    </div>
+                    <div class="methods">
+                        <div class="method_part_one">
+                            <p>
+                                MT: <input type="text" name="mt_name" id="mt_name"> -   
+                                <input type="number" name="mt_line" id="mt_line" value="1"> Line
+                            </p>
+                        </div>
+                        <br>
+                        <div class="method_part_two">
+                            <p>
+                                <input type="number" name="mt_kg_1" id="mt_kg_1"> kg
+                                <input type="number" name="mt_cm_1" id="mt_cm_1"> cm
+                            </p>
+                            <p>From: <input type="text" name="mt_time_1" id="mt_time_1"/></p>
+                            <p>To: <input type="text" name="mt_time_2" id="mt_time_2"/></p>
+                        </div>
+                        <br>
+                        <div class="method_part_three">
+                            <p>
+                                M1: <input type="number" name="mt_m1_1" id="mt_m1_1"> = 
+                                <input type="number" name="mt_cm1_1" id="mt_cm1_1"> cm
+                            </p>
+                            <p>V1: <input type="number" name="mt_v1_1" id="mt_v1_1"></p>
+                            <p>
+                                M2: <input type="number" name="mt_m2_1" id="mt_m2_1"> = 
+                                <input type="number" name="mt_cm2_1" id="mt_cm2_1"> cm
+                            </p>
+                            <p>V2: <input type="number" name="mt_v2_1" id="mt_v2_1"></p>
+                            <br>
+                        </div>
+                        <div class="method_part_four">
+                            <p>M2 - M1: <input type="number" name="mt_m2_m1_1" id="mt_m2_m1_1" readonly></p>
+                            <p>Full - M2: <input type="number" name="mt_full_tank_1" id="mt_full_tank_1" readonly></p>
+                        </div>
+                        <p><button id="mt_clear">Clear</button></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <footer></footer>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/animation.js"></script>
+        <script type="text/javascript" src="js/calculation.js"></script>
+        <script type="text/javascript" src="js/JSPure.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    </body>
+</html>

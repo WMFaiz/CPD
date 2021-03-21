@@ -1,0 +1,307 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.shadow
+ */
+ * {
+    padding: 0px;
+    margin:  0px;
+}
+
+body {
+    background-color: rgb(16, 24, 32);
+    color: rgb(135, 206, 235);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    transition: 0.5s;
+}
+
+.header {
+    position: fixed;
+    /* background-color: #f2aa4c; */
+    /* background-color: #101820; */
+    background-color: rgb(245, 246, 250);
+    /* background-color: #353b48; */
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    top: 0px;
+    color: rgb(16, 24, 32);
+    box-shadow: 0px -10px 20px 0px rgb(16, 24, 32);
+    z-index: 10;
+}
+
+.shadow {
+    position: fixed;
+    /* background-color: #f2aa4c; */
+    /* background-color: #101820; */
+    background-color: rgb(245, 246, 250);
+    /* background-color: #353b48; */
+    text-align: center;
+    width: 100%;
+    height: 3px;
+    top: 40px;
+    box-shadow: 0px -10px 20px 0px rgb(16, 24, 32);
+    z-index: 10;
+}
+
+.header .title {
+    position: fixed;
+    text-align: center;
+    top: 5px;
+    left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: initial;
+    z-index: 10;
+}
+
+.mt {
+    position: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    bottom: 50%;
+    right: 0px;
+    font-size: 17px;
+    background-color: rgb(245, 249, 250);
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0px 0px 15px 0px rgb(16, 24, 32);
+    width: 35px;
+    z-index: 10;
+    text-align: center;
+    color: rgb(16, 24, 32);
+    font-style: normal;
+    transition: 0.5s;
+}
+
+.ct {
+    position: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    bottom: 45%;
+    right: 0px;
+    font-size: 17px;
+    background-color: rgb(245, 246, 250);
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0px 0px 15px 0px rgb(16, 24, 32);
+    width: 35px;
+    z-index: 9;
+    text-align: center;
+    color: rgb(16, 24, 32);
+    font-style: normal;
+    transition: 0.5s;
+}
+
+.st {
+    position: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    bottom: 40%;
+    right: 0px;
+    font-size: 17px;
+    background-color: rgb(245, 246, 250);
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0px 0px 15px 0px rgb(16, 24, 32);
+    width: 35px;
+    z-index: 7;
+    text-align: center;
+    color: rgb(16, 27, 32);
+    font-style: normal;
+    transition: 0.5s;
+}
+
+/* Mixing Tank */
+.mt_calculation .methods{
+    position: relative;
+    padding-top: 80px;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.mt_calculation .methods #mt_name, .mt_calculation .methods #mt_line {
+    width: 100px;
+}
+
+.mt_calculation .methods button{
+    padding: 5px 10px;
+    font-size: 17px;
+    margin-bottom: 25px;
+    background-color: rgb(0, 255, 187);
+    border: none;
+}
+
+.mt_calculation .methods .mt_kg_1_copy {
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.mt_calculation .methods input {
+    margin-bottom: 20px;
+    height: 30px;
+    font-size: 17px;
+    border-style: none none solid none;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color:rgb(16, 24, 32);
+    background-color: rgb(73, 210, 255);
+}
+
+.mt_calculation .methods #mt_m1_1, .mt_calculation .methods #mt_v1_1,
+.mt_calculation .methods #mt_m2_1, .mt_calculation .methods #mt_v2_1{
+    /* background-color: rgb(0, 255, 145); */
+    background-color: rgb(128, 255, 212);
+    border: none;
+}
+
+.mt_calculation .methods #mt_v1_1, .mt_calculation .methods #mt_v2_1{
+    width: 100px;
+    margin-left: 3px;
+}
+
+.mt_calculation .methods #mt_m1_1, .mt_calculation .methods #mt_cm1_1,
+.mt_calculation .methods #mt_m2_1, .mt_calculation .methods #mt_cm2_1 {
+    width: 100px;
+}
+
+.mt_calculation .methods #mt_cm_1, .mt_calculation .methods #mt_kg_1{
+    width: 100px;
+    margin-left: 10px;
+}
+
+.mt_calculation .methods .method_part_one input, .mt_calculation .methods .method_part_three input {
+    border-style: solid;
+}
+
+.mt_calculation .methods #mt_clear{
+    width: 95%;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    color:rgb(16, 24, 32);
+}
+
+.mt_calculation .methods #mt_m2_m1_1{
+    margin-left: 10px;
+}
+
+.mt_calculation .methods #mt_full_tank_1{
+    margin-left: 8px;
+}
+
+.mt_calculation .methods #mt_time_1{
+    margin-left: 12px;
+}
+
+.mt_calculation .methods #mt_time_2{
+    margin-left: 30px;
+}
+
+/* Cougulant Tank */
+.ct_calculation .methods{
+    position: relative;
+    padding-top: 80px;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.ct_calculation .methods #ct_name, .ct_calculation .methods #ct_line {
+    width: 100px;
+}
+
+.ct_calculation .methods button{
+    padding: 5px 10px;
+    font-size: 17px;
+    margin-bottom: 25px;
+    background-color: rgb(0, 255, 187);
+    border: none;
+}
+
+.ct_calculation .methods .ct_kg_1_copy {
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.ct_calculation .methods input {
+    margin-bottom: 20px;
+    height: 30px;
+    font-size: 17px;
+    border-style: none none solid none;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color:rgb(16, 24, 32);
+    background-color: rgb(73, 210, 255);
+}
+
+.ct_calculation .methods #ct_m1_1, .ct_calculation .methods #ct_v1_1,
+.ct_calculation .methods #ct_m2_1, .ct_calculation .methods #ct_v2_1{
+    /* background-color: rgb(0, 255, 145); */
+    background-color: rgb(128, 255, 212);
+    border: none;
+}
+
+.ct_calculation .methods #ct_v1_1, .ct_calculation .methods #ct_v2_1{
+    width: 100px;
+    margin-left: 3px;
+}
+
+.ct_calculation .methods #ct_m1_1, .ct_calculation .methods #ct_cm1_1,
+.ct_calculation .methods #ct_m2_1, .ct_calculation .methods #ct_cm2_1 {
+    width: 100px;
+}
+
+.ct_calculation .methods #ct_cm_1, .ct_calculation .methods #ct_kg_1{
+    width: 100px;
+    margin-left: 10px;
+}
+
+.ct_calculation .methods .method_part_one input, .ct_calculation .methods .method_part_three input {
+    border-style: solid;
+}
+
+.ct_calculation .methods #ct_clear{
+    width: 95%;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    color:rgb(16, 24, 32);
+}
+
+.ct_calculation .methods #ct_m2_m1_1{
+    margin-left: 10px;
+}
+
+.ct_calculation .methods #ct_full_tank_1{
+    margin-left: 8px;
+}
+
+.ct_calculation .methods #ct_time_1{
+    margin-left: 12px;
+}
+
+.ct_calculation .methods #ct_time_2{
+    margin-left: 30px;
+}

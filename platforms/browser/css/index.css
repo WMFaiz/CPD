@@ -1,0 +1,139 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+ * {
+    padding: 0px;
+    margin:  0px;
+}
+
+.header {
+    position: fixed;
+    /* background-color: #f2aa4c; */
+    /* background-color: #101820; */
+    background-color: #f5f6fa;
+    /* background-color: #353b48; */
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    top: 0px;
+    box-shadow: 0px -10px 20px 0px #101820;
+    z-index: 10;
+}
+
+.shadow {
+    position: fixed;
+    /* background-color: #f2aa4c; */
+    /* background-color: #101820; */
+    background-color: #f5f6fa;
+    /* background-color: #353b48; */
+    text-align: center;
+    width: 100%;
+    height: 5px;
+    top: 40px;
+    box-shadow: 0px -10px 20px 0px #101820;
+    z-index: 10;
+}
+
+.header .title {
+    position: fixed;
+    text-align: center;
+    top: 5px;
+    left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: initial;
+    z-index: 10;
+}
+
+.mt {
+    position: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    bottom: 50%;
+    right: 0px;
+    font-size: 17px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0px 0px 15px 0px #10182080;
+    width: 35px;
+    z-index: 10;
+    text-align: center;
+}
+
+.ct {
+    position: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    bottom: 45%;
+    right: 0px;
+    font-size: 17px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0px 0px 15px 0px #10182080;
+    width: 35px;
+    z-index: 9;
+    text-align: center;
+}
+
+.st {
+    position: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    bottom: 40%;
+    right: 0px;
+    font-size: 17px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0px 0px 15px 0px #10182080;
+    width: 35px;
+    z-index: 7;
+    text-align: center;
+}
+
+.mt_calculation .methods{
+    position: relative;
+    padding-top: 80px;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.mt_calculation .methods #mt_name, .mt_calculation .methods #mt_line {
+    width: 100px;
+}
+
+.mt_calculation .methods button{
+    padding: 5px 10px;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.mt_calculation .methods .mt_kg_1_copy {
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.mt_calculation .methods input {
+    margin-bottom: 20px;
+    height: 30px;
+    font-size: 17px;
+}
+
+.mt_calculation .methods #mt_m1_1, .mt_calculation .methods #mt_cm1_1,
+.mt_calculation .methods #mt_m2_1, .mt_calculation .methods #mt_cm2_1 {
+    width: 100px;
+}
